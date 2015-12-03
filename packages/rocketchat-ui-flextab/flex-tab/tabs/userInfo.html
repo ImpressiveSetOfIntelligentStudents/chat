@@ -1,5 +1,9 @@
 <template name="userInfo">
 	{{#if $.Session.get 'showUserInfo'}}
+
+        <div>
+            <a class="back" id="swipebox-close" style="background-image: url(/img/icons.svg);background-color: #13679a;margin: 10px;width: 40px;height: 40px;background-position: 10px 7px;"></a>
+		</div>
 		{{#with user}}
 		<div class="about clearfix">
 			<div class="thumb">

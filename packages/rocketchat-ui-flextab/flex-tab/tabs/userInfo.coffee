@@ -70,7 +70,7 @@ Template.userInfo.events
 							i.msRequestFullscreen()
 
 	'click .back': (e) ->
-		Session.set('showUserInfo', null)
+		RocketChat.TabBar.closeFlex()
 
 
 Template.userInfo.onCreated ->

@@ -1685,16 +1685,14 @@ a.github-fork {
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	left: @rooms-box-width;
+	left: 0;
 	right: 0;
 	width: auto;
 	height: auto;
-	margin-right: 40px;
 	.transition(width .25s cubic-bezier(.5, 0, .1, 1));
 	&.flex-opened {
 		right: @flex-tab-width;
 		.flex-tab {
-			right: 40px;
 			.transform(translateX(0));
 		}
 	}
@@ -3728,9 +3726,6 @@ a.github-fork {
 			&.notransition {
 				.transition(transform .0s);
 			}
-		}
-		.fixed-title h2 {
-			margin-left: 45px;
 		}
 		.flex-tab {
 			top: 0;

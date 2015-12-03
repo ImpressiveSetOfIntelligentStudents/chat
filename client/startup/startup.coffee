@@ -11,7 +11,7 @@ Meteor.startup ->
 	window.lastMessageWindowHistory = {}
 
 	@defaultUserLanguage = ->
-		lng = window.navigator.userLanguage || window.navigator.language || 'en'
+		lng = 'fr'
 		# Fix browsers having all-lowercase language settings eg. pt-br, en-us
 		re = /([a-z]{2}-)([a-z]{2})/
 		if re.test lng
