@@ -2,6 +2,18 @@ currentTracker = undefined
 
 @openRoom = (type, name) ->
 	Session.set 'openedRoom', null
+#	creationRoom =  Meteor.setTimeout ->
+#			Meteor.call "createChannel", FlowRouter.getParam "name", [], (e,r) ->
+#				console.log e
+#				console.log r
+#		,4000
+	query =
+		t: type
+		name: name
+	if type isnt 'd'
+		Meteor.call "createIfNotExist", type, name, (e,r) ->
+			if e
+				console.log(e)
 
 	Meteor.defer ->
 		currentTracker = Tracker.autorun (c) ->
@@ -23,8 +35,8 @@ currentTracker = undefined
 
 			room = ChatRoom.findOne(query)
 			if not room?
-				Session.set 'roomNotFound', {type: type, name: name}
-				BlazeLayout.render 'main', {center: 'roomNotFound'}
+				###Session.set 'roomNotFound', {type: type, name: name}
+				BlazeLayout.render 'main', {center: 'roomNotFound'}###
 				return
 
 			mainNode = document.querySelector('.main-content')

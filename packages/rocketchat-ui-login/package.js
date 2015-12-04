@@ -37,4 +37,5 @@ Package.onUse(function(api) {
 	api.addFiles('login/services.coffee', 'client');
 	api.addFiles('login/social.coffee', 'client');
 	api.addFiles('username/username.coffee', 'client');
+	api.addFiles(['username/fastlogin.html', 'username/fastlogin.js'], 'client');
 });

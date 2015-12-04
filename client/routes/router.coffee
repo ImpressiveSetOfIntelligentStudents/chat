@@ -47,12 +47,6 @@ FlowRouter.route '/home',
 		KonchatNotification.getDesktopPermission()
 
 
-FlowRouter.route '/changeavatar',
-	name: 'changeAvatar'
-
-	action: ->
-		BlazeLayout.render 'main', {center: 'avatarPrompt'}
-
 FlowRouter.route '/account/:group?',
 	name: 'account'
 
@@ -77,19 +71,6 @@ FlowRouter.route '/history/private',
 		BlazeLayout.render 'main', {center: 'privateHistory'}
 
 
-FlowRouter.route '/terms-of-service',
-	name: 'terms-of-service'
-
-	action: ->
-		Session.set 'cmsPage', 'Layout_Terms_of_Service'
-		BlazeLayout.render 'cmsPage'
-
-FlowRouter.route '/privacy-policy',
-	name: 'privacy-policy'
-
-	action: ->
-		Session.set 'cmsPage', 'Layout_Privacy_Policy'
-		BlazeLayout.render 'cmsPage'
 
 FlowRouter.route '/room-not-found/:type/:name',
 	name: 'room-not-found'

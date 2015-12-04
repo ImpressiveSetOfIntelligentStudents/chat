@@ -7,14 +7,14 @@ Meteor.methods
 			throw new Meteor.Error 'registration-disabled', 'User registration is only allowed via Secret URL'
 
 		userData =
+			username: formData.username
 			email: formData.email
 			password: formData.pass
 
 		userId = Accounts.createUser userData
+		RocketChat.models.Users.setUserActive userId, true
+		profile = {}
 
-		RocketChat.models.Users.setName userId, formData.name
-
-		if userData.email
-			Accounts.sendVerificationEmail(userId, userData.email);
-
+		RocketChat.models.Users.setProfile userId, profile
+		RocketChat.models.Users.setName userId, formData.username
 		return userId

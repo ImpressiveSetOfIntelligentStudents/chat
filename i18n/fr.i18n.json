@@ -371,7 +371,7 @@
   "Username_cant_be_empty" : "Le nom d'utilisateur doit être renseigné",
   "Username_description" : "Le nom d'utilisateur est utilisé pour permettre à d'autres personnes de vous mentionner dans leurs messages.",
   "Username_invalid" : "<strong>%s</strong> n'est pas un nom d'utilisateur valide,<br/> utilisez des lettres, des chiffres, des points et des tirets uniquement",
-  "Username_title" : "Enregistrer un nom d'utilisateur",
+  "Username_title" : "Choisissez un nom d'utilisateur",
   "Username_unavaliable" : "<strong>%s</strong> est déjà utilisé :(",
   "Users" : "Utilisateurs",
   "View_All" : "Voir tous",
